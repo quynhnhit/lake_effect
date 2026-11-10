@@ -3,404 +3,85 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>What do I actually need in the winter? | Lake Effect</title>
-<meta name="description" content="A Chicago-winter-loving student's honest guide to gloves, hats, scarves, base layers, boots and coats. Shop your closet first.">
+<title>Lake Effect | Your personal style guide</title>
+<meta name="description" content="Personal shopping and styling for people who hate shopping, plus free guides to the pieces I actually love.">
+<meta property="og:title" content="Lake Effect | Your personal style guide">
+<meta property="og:description" content="Personal shopping and styling for people who hate shopping, plus free guides to the pieces I actually love.">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90' fill='%23002db4'%3E✦%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,400&family=Inclusive+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-<style>
-/* ===== Colors and fonts: change them here ===== */
-:root {
-  --bg: #fdfbf9;        /* page background */
-  --surface: #ffffff;   /* cards */
-  --soft: #f1f1ef;      /* soft fills */
-  --ink: #101010;       /* headings and main text */
-  --text: #474747;      /* secondary text */
-  --muted: #6f6f6d;     /* small labels */
-  --line: #dedede;      /* borders */
-  --blue: #002db4;      /* buttons and accents */
-  --blue-dark: #164485;
-  --sage: #9eb8ab;      /* tag border */
-  --sage-fill: #eef3ef; /* tag fill */
-  --display: "Averia Serif Libre", Georgia, serif;
-  --body: "Inclusive Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
-  color-scheme: light;
-}
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; }
-@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-body { margin: 0; background: var(--bg); color: var(--ink); font: 17px/1.65 var(--body); }
-a { color: var(--blue); }
-a:hover { color: var(--blue-dark); }
-a:focus-visible { outline: 3px solid var(--blue); outline-offset: 3px; border-radius: 4px; }
-.wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px 80px; }
-
-/* Header */
-.top { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; padding: 24px 0 40px; }
-.brand { font: 400 24px/1 var(--display); letter-spacing: -0.5px; color: var(--ink); text-decoration: none; }
-.brand span, .star { color: var(--blue); }
-.nav { display: flex; gap: 8px; flex-wrap: wrap; }
-.pill { border: 1px solid var(--line); color: var(--ink); border-radius: 200px; padding: 8px 18px; text-decoration: none; font-size: 15px; }
-.pill.on { background: var(--blue); border-color: var(--blue); color: #fff; }
-
-/* Title block */
-.kicker { font-size: 13px; letter-spacing: 0.4px; text-transform: uppercase; color: var(--muted); }
-h1 { font: 400 clamp(40px, 6vw, 64px)/1.02 var(--display); letter-spacing: -1.5px; margin: 14px 0 14px; max-width: 16ch; text-wrap: balance; }
-.date { font-size: 14px; color: var(--muted); }
-
-/* Layout */
-.cols { display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-start; margin-top: 40px; }
-main { flex: 999 1 560px; min-width: 0; max-width: 760px; }
-aside { flex: 1 1 220px; position: sticky; top: 24px; display: flex; flex-direction: column; gap: 10px; padding: 20px; border: 1px solid var(--line); border-radius: 20px; background: var(--surface); }
-aside a { color: var(--ink); text-decoration: none; font-size: 15px; }
-aside a:hover { color: var(--blue); }
-
-.byline { display: flex; gap: 14px; align-items: center; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 16px 0; font-size: 15px; line-height: 1.45; }
-.byline img { width: 56px; height: 56px; border-radius: 50%; object-fit: cover; object-position: 28% 45%; flex: 0 0 56px; border: 1px solid var(--line); }
-.byline small { display: block; color: var(--muted); font-size: 15px; }
-.intro { font-size: 19px; margin: 32px 0 0; }
-.intro p { margin: 0 0 18px; }
-
-h2 { font: 400 40px/1.1 var(--display); letter-spacing: -1.5px; margin: 0 0 18px; }
-.group { font-size: 13px; letter-spacing: 0.4px; text-transform: uppercase; color: var(--muted); border-top: 1px solid var(--line); padding-top: 24px; margin: 56px 0 32px; }
-.sec { margin-bottom: 56px; scroll-margin-top: 24px; }
-.sec > p { margin: 0 0 18px; }
-
-/* Tags */
-.tags { display: flex; gap: 6px; flex-wrap: wrap; }
-.tag { font-size: 12px; letter-spacing: 0.4px; border: 1px solid var(--sage); background: var(--sage-fill); box-shadow: inset 0 2px 3px #d0d9ca; color: var(--ink); border-radius: 200px; padding: 2px 11px; }
-.tag-solid { background: var(--blue); border-color: var(--blue); box-shadow: none; color: #fff; }
-.tag-gift { background: transparent; border-color: var(--blue); box-shadow: none; color: var(--blue); }
-
-/* Summary grid */
-#everything { margin-top: 48px; scroll-margin-top: 24px; }
-#everything h2 { font-size: 34px; letter-spacing: -1px; }
-.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 14px; }
-.sum { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 8px; text-decoration: none; color: var(--text); transition: border-color .15s, transform .15s; }
-.sum:hover { border-color: var(--blue); transform: translateY(-2px); }
-@media (prefers-reduced-motion: reduce) { .sum, .sum:hover { transition: none; transform: none; } }
-.sum-cat { font-size: 14px; color: var(--muted); }
-.sum-name { font-size: 17px; color: var(--ink); line-height: 1.3; }
-.sum-price { font-size: 14px; color: var(--blue); margin-top: auto; }
-
-/* Pick + alternates */
-.pick { background: var(--surface); border: 1px solid var(--line); border-radius: 20px; padding: 22px; display: flex; flex-direction: column; gap: 10px; margin: 8px 0 14px; }
-.pick h3 { font: 400 26px/1.15 var(--display); letter-spacing: -0.5px; margin: 0; }
-.pick p { margin: 0; color: var(--text); }
-.btn { align-self: flex-start; background: var(--blue); color: #fff; border-radius: 200px; padding: 10px 20px; text-decoration: none; font-size: 15px; }
-.btn:hover { background: var(--blue-dark); color: #fff; }
-.alts { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 14px; }
-.alt { border: 1px solid var(--line); border-radius: 16px; padding: 16px; display: flex; flex-direction: column; gap: 8px; }
-.alt h4 { margin: 0; font-size: 18px; font-weight: 400; line-height: 1.3; }
-.alt p { margin: 0; font-size: 15px; color: var(--text); }
-.alt a { font-size: 15px; margin-top: auto; }
-.chips { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
-.chips span:first-child { font-size: 14px; color: var(--muted); }
-
-/* Running table */
-.table-box { overflow-x: auto; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); }
-table { width: 100%; border-collapse: collapse; font-size: 15px; min-width: 560px; }
-th { text-align: left; font-weight: 500; font-size: 13px; color: var(--muted); padding: 12px 16px; }
-td { padding: 12px 16px; border-top: 1px solid var(--line); vertical-align: top; color: var(--text); }
-td:first-child { color: var(--ink); }
-.num { font-variant-numeric: tabular-nums; }
-
-/* Guide box */
-.guide { background: var(--blue); color: #fff; border-radius: 24px; padding: 28px; display: flex; flex-wrap: wrap; gap: 28px; align-items: center; margin-top: 56px; }
-.guide img { flex: 0 0 240px; width: 240px; height: 240px; border-radius: 18px; object-fit: cover; object-position: 45% 50%; }
-.guide div { flex: 1 1 280px; display: flex; flex-direction: column; gap: 14px; }
-.guide .kicker { color: #fff; opacity: .85; }
-.guide h2 { font-size: 32px; letter-spacing: -1px; margin: 0; }
-.guide p { margin: 0; }
-.guide a { align-self: flex-start; background: #fff; color: var(--blue); border-radius: 200px; padding: 12px 22px; text-decoration: none; }
-.guide a:hover { background: var(--soft); color: var(--blue); }
-.guide a:focus-visible { outline-color: #fff; }
-
-footer { border-top: 1px solid var(--line); margin-top: 56px; padding-top: 24px; font-size: 14px; color: var(--muted); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-
-@media (max-width: 760px) {
-  aside { position: static; order: -1; }
-  h2 { font-size: 32px; }
-  .guide img { width: 100%; height: 260px; flex-basis: 100%; }
-}
-</style>
+<link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 <div class="wrap">
 
   <header class="top">
-    <a class="brand" href="#">lake effect <span>✦</span></a>
+    <a class="brand" href="./" aria-current="page">lake effect <span>✦</span></a>
     <nav class="nav" aria-label="Main">
-      <a class="pill on" href="#">guides</a>
-      <a class="pill" href="#guide">about</a>
-      <a class="pill" href="https://docs.google.com/forms/d/e/1FAIpQLSfLQm3GucfrW4snLwF-FonYZRAUPphRfsn3Q043VYb1VzMQIQ/viewform?usp=header" target="_blank" rel="noopener">reach out</a>
+      <a class="pill" href="guides/">guides</a>
+      <a class="pill" href="work-with-me.html">work with me</a>
     </nav>
   </header>
 
-  <div class="kicker">Style › Winter</div>
-  <h1>What do I actually need in the winter?</h1>
-  <div class="date">Published November 10, 2026</div>
+  <section class="hero">
+    <div class="kicker">The project</div>
+    <h1>Meet Lake Effect: your personal style guide</h1>
+    <p class="lede">Lake Effect started as a way to help friends figure out what to buy for the winter. Now, Lake Effect helps people who don’t have time to shop find clothes that fit their closet and needs, from work outfits to rehearsal dinners.</p>
+    <a class="btn" href="guides/">Read the guides</a>
+  </section>
 
-  <div class="cols">
-    <main>
-      <div class="byline">
-        <img src="snow-angel.jpg" alt="Quynh-Nhi making a snow angel">
-        <div>By Quynh-Nhi Tran<small>My credentials: winter is my favorite season, I chase the winter sun, I’ve survived 7 Chicago winters, and I’m always cold.</small></div>
+  <section class="block" aria-labelledby="how">
+    <h2 id="how">How it works</h2>
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">1</span>
+        <h3>Let’s chat</h3>
+        <p>Tell me what you’re looking for.</p>
       </div>
-
-      <div class="intro">
-        <p>Whenever I talk to my family about living in Chicago, they are always shocked when I tell them that I love winter. There is really nothing that compares to winter morning sun, and I highly recommend watching a sunrise over the lake when you have a chance.</p>
-        <p>That being said, to prepare for Chicago winters, you will want to have one of each of the essentials. I am a strong proponent of shopping your own closet, so don’t feel the need to buy anything unless you don’t already have it.</p>
+      <div class="step">
+        <span class="step-num">2</span>
+        <h3>Let me do the shopping</h3>
+        <p>I put together a curated list of items.</p>
       </div>
+      <div class="step">
+        <span class="step-num">3</span>
+        <h3>Try it out</h3>
+        <p>See how things fit, then buy or return.</p>
+      </div>
+    </div>
+  </section>
 
-      <section id="everything">
-        <h2>Everything I recommend</h2>
-        <div class="grid">
-          <a class="sum" href="https://www.hestragloves.us/products/tiril-mitt-black" target="_blank" rel="noopener">
-            <div class="tags"><span class="tag">My go-to</span><span class="tag tag-gift">✦ gift idea</span></div>
-            <span class="sum-cat">Gloves</span>
-            <span class="sum-name">Hestra Tiril mittens</span>
-            <span class="sum-price">$195 from Hestra</span>
-          </a>
-          <a class="sum" href="https://www.costco.com/p/-/head-mens-ultrafit-touchscreen-running-gloves/100428847" target="_blank" rel="noopener">
-            <div class="tags"><span class="tag">Budget pick</span></div>
-            <span class="sum-cat">Gloves</span>
-            <span class="sum-name">HEAD running gloves</span>
-            <span class="sum-price">$16 from Costco</span>
-          </a>
-          <a class="sum" href="https://www.alexmill.com/collections/cashmere-beanie/products/cashmere-solid-beanie-in-navy" target="_blank" rel="noopener">
-            <div class="tags"><span class="tag">My go-to</span><span class="tag tag-gift">✦ gift idea</span></div>
-            <span class="sum-cat">Hat</span>
-            <span class="sum-name">Alex Mill cashmere beanie</span>
-            <span class="sum-price">$98 from Alex Mill</span>
-          </a>
-          <a class="sum" href="https://www.quince.com/unisex/cashmere/beanie?color=lugano-teal&amp;size=m/l" target="_blank" rel="noopener">
-            <div class="tags"><span class="tag">Budget pick</span></div>
-            <span class="sum-cat">Hat</span>
-            <span class="sum-name">Quince cashmere beanie</span>
-            <span class="sum-price">$35 from Quince</span>
-          </a>
-          <a class="sum" href="https://www.sezane.com/us-en/product/marianne-scarf/royal-blue" target="_blank" rel="noopener">
-            <div class="tags"><span class="tag">My go-to</span><span class="tag tag-gift">✦ gift idea</span></div>
-            <span class="sum-cat">Scarf</span>
-            <span class="sum-name">Sézane Marianne scarf</span>
-            <span class="sum-price">$105 from Sézane</span>
-          </a>
-          <a class="sum" href="https://www.quince.com/unisex/ribbed-knit-cashmere-scarf?color=olive-twist&amp;size=one-size" target="_blank" rel="noopener">
-            <div class="tags"><span class="tag">Budget pick</span><span class="tag tag-gift">✦ gift idea</span></div>
-            <span class="sum-cat">Scarf</span>
-            <span class="sum-name">Quince ribbed cashmere scarf</span>
-            <span class="sum-price">$62.50 from Quince</span>
-          </a>
-          <a class="sum" href="https://www.intimissimi.com/us/product/long_sleeve_boatneck_ultralight_with_cashmere_top-CLD28B.html" target="_blank" rel="noopener">
-            <div class="tags"><span class="tag">My go-to</span></div>
-            <span class="sum-cat">Base layer</span>
-            <span class="sum-name">Intimissimi ultralight top</span>
-            <span class="sum-price">$65 from Intimissimi</span>
-          </a>
-          <a class="sum" href="https://www.uniqlo.com/us/en/products/E469765-000/00?colorDisplayCode=78" target="_blank" rel="noopener">
-            <div class="tags"><span class="tag">Budget pick</span></div>
-            <span class="sum-cat">Base layer</span>
-            <span class="sum-name">Uniqlo Heattech</span>
-            <span class="sum-price">$25 from Uniqlo</span>
-          </a>
-          <a class="sum" href="https://www.rei.com/product/193339/patagonia-silent-down-long-parka-womens" target="_blank" rel="noopener">
-            <div class="tags"><span class="tag">My pick</span></div>
-            <span class="sum-cat">Coat</span>
-            <span class="sum-name">Patagonia Silent Down long parka</span>
-            <span class="sum-price">$449 from REI</span>
-          </a>
-        </div>
-      </section>
+  <section class="block meet" aria-labelledby="meet">
+    <img src="assets/meet-your-guide.jpg" alt="Quynh-Nhi in a silk scarf, mid-laugh in a photo booth, next to a friend holding a vintage camera">
+    <div>
+      <h2 id="meet">Meet your guide</h2>
+      <p>Quynh-Nhi is a woman of many hobbies, but her first love has always been fashion. One of her favorite stories from when she was a kid is when she refused to go to school unless her mom let her wear an all-pink outfit. Over time, she has moved away from wearing pink and developed an eye for helping people find clothes and shoes in their personal style. From sneaker recommendations for her coworkers to a workwear shopping trip with her aunt, Quynh-Nhi is always thinking about how a piece might fit into someone’s closet. Styling others has given her an outlet for her love of shopping and her love of connecting with people.</p>
+    </div>
+  </section>
 
-      <div class="group">Casual winterwear</div>
+  <section class="block" aria-labelledby="latest">
+    <div class="row-head">
+      <h2 id="latest">Latest guides</h2>
+      <a href="guides/">All guides →</a>
+    </div>
+    <div class="cards">
+      <a class="card" href="guides/winter.html">
+        <img src="assets/snow-angel.jpg" alt="">
+        <div class="tags"><span class="tag">Winter</span></div>
+        <h3>What do I actually need in the winter?</h3>
+        <p>Gloves, hats, scarves, base layers, boots and coats. Shop your closet first.</p>
+      </a>
+      <div class="card card-soon">
+        <h3>More guides coming soon</h3>
+      </div>
+    </div>
+  </section>
 
-      <section id="gloves" class="sec">
-        <h2>Gloves</h2>
-        <p>I would argue this might be the most important purchase. My dad has always reprimanded me for putting my hands in my pockets, so I always have a pair of gloves on me in the winter. In general, I would pick fleece-lined leather gloves. Leather is hardy against super cold wind and water resistant, so if they get wet, your hands won’t freeze off.</p><p>I wouldn’t try too hard to find a pair with touchscreen pads; they don’t work very well. Mittens are also a very good option because your fingers can keep each other warm!</p>
-        
-        <div class="pick">
-          <div class="tags"><span class="tag tag-solid">My go-to</span><span class="tag">for days below 30°F</span><span class="tag tag-gift">✦ gift idea</span></div>
-          <h3>Hestra Tiril mittens</h3>
-          <p>My go-tos all winter. They’re not as warm as ski gloves, but they’re so much warmer than the athletic gloves I wore in college. Slim, even though they’re leather and lined.</p>
-          <a href="https://www.hestragloves.us/products/tiril-mitt-black" target="_blank" rel="noopener" class="btn">$195 from Hestra</a>
-        </div>
-        <div class="alts">
-          <div class="alt">
-            <div class="tags"><span class="tag">Budget pick</span></div>
-            <h4>HEAD UltraFit running gloves</h4>
-            <p>I don’t expect this year to be super cold, so you could get away with these if you aren’t planning on being in the Midwest for long. My daily driver through college.</p>
-            <a href="https://www.costco.com/p/-/head-mens-ultrafit-touchscreen-running-gloves/100428847" target="_blank" rel="noopener">$16 from Costco →</a>
-          </div>
-          <div class="alt">
-            <div class="tags"><span class="tag">Intriguing</span></div>
-            <h4>COS cashmere-lined leather mittens</h4>
-            <p>A cute pair I’m intrigued by. I don’t have them, but they are very pretty.</p>
-            <a href="https://www.cos.com/en-us/women/accessories/hatsscarvesgloves/gloves/product/cashmere-lined-leather-mittens-black-1369770001" target="_blank" rel="noopener">$110 from COS →</a>
-          </div>
-        </div>
-      </section>
-      <section id="hats" class="sec">
-        <h2>Hats</h2>
-        <p>The next most important thing on my list is something to cover your head and ears. If your head is cold, you will feel cold. If you don’t want to buy anything, you should be fine in a hoodie, but as someone who is always cold, I really appreciate having a beanie or balaclava on. I have knit my go-tos, but I have also collected quite a few.</p>
-        
-        <div class="pick">
-          <div class="tags"><span class="tag tag-solid">My go-to</span><span class="tag">for days below 40°F</span><span class="tag tag-gift">✦ gift idea</span></div>
-          <h3>Alex Mill cashmere beanie</h3>
-          <p>I took this one from my boyfriend. It fits close to the head and isn’t too long, so it’s easy to wear with casual outfits. Super soft and not itchy.</p>
-          <a href="https://www.alexmill.com/collections/cashmere-beanie/products/cashmere-solid-beanie-in-navy" target="_blank" rel="noopener" class="btn">$98 from Alex Mill</a>
-        </div>
-        <div class="alts">
-          <div class="alt">
-            <div class="tags"><span class="tag">Budget pick</span></div>
-            <h4>Quince cashmere beanie</h4>
-            <p>Quince is pumping out great basics. I’d expect this to be warm enough for the winter, and it comes in lots of colors.</p>
-            <a href="https://www.quince.com/unisex/cashmere/beanie?color=lugano-teal&amp;size=m/l" target="_blank" rel="noopener">$35 from Quince →</a>
-          </div>
-          <div class="alt">
-            <div class="tags"><span class="tag">For him</span></div>
-            <h4>Octobre Turner beanie</h4>
-            <p>Octobre is Sézane’s menswear equivalent, with great pieces. My brother loves this beanie.</p>
-            <a href="https://www.octobre-editions.com/us-en/product/turner-beanie/sage-green" target="_blank" rel="noopener">$60 from Octobre →</a>
-          </div>
-          <div class="alt">
-            <div class="tags"><span class="tag">Protect your bangs</span></div>
-            <h4>Old Navy balaclava</h4>
-            <p>I knit a balaclava last year and wore it all the time. Perfect for not squishing your hair.</p>
-            <a href="https://oldnavy.gap.com/browse/product.do?pid=9063480120000" target="_blank" rel="noopener">$20 from Old Navy →</a>
-          </div>
-          <div class="alt">
-            <div class="tags"><span class="tag">Hate hats?</span></div>
-            <h4>Edikted faux-fur earmuffs</h4>
-            <p>Warm ears without smooshing your hair, and a great statement piece.</p>
-            <a href="https://edikted.com/products/acc2249_black" target="_blank" rel="noopener">$8.80 from Edikted →</a>
-          </div>
-        </div>
-      </section>
-      <section id="scarves" class="sec">
-        <h2>Scarves</h2>
-        <p>My mom would say this is the most important one. Not only can you wrap a scarf around your neck and face in the cold, you can wrap it around your head like a balaclava or set it on your lap like a blanket.</p><p>Scarves are worth the investment: the nicer wool and alpaca ones tend to be less itchy, warmer and antimicrobial. These are a little pricier, but you really only need one, and they make great holiday wishlist items.</p>
-        
-        <div class="pick">
-          <div class="tags"><span class="tag tag-solid">My go-to</span><span class="tag">for days below 40°F</span><span class="tag tag-gift">✦ gift idea</span></div>
-          <h3>Sézane Marianne scarf</h3>
-          <p>My mom got me this scarf for Christmas, and it is my most worn scarf by a mile. So warm and large. I love the color.</p>
-          <a href="https://www.sezane.com/us-en/product/marianne-scarf/royal-blue" target="_blank" rel="noopener" class="btn">$105 from Sézane</a>
-        </div>
-        <div class="alts">
-          <div class="alt">
-            <div class="tags"><span class="tag">Budget pick</span><span class="tag tag-gift">✦ gift idea</span></div>
-            <h4>Quince ribbed cashmere scarf</h4>
-            <p>My boyfriend always borrows mine. This is the one I would buy him.</p>
-            <a href="https://www.quince.com/unisex/ribbed-knit-cashmere-scarf?color=olive-twist&amp;size=one-size" target="_blank" rel="noopener">$62.50 from Quince →</a>
-          </div>
-          <div class="alt">
-            <div class="tags"><span class="tag">Also pretty</span></div>
-            <h4>Percival Melville cable-knit scarf</h4>
-            <p>This one is pretty and looks warm!</p>
-            <a href="https://www.percivalclo.com/products/melville-cable-knited-scarf-wool-ecru" target="_blank" rel="noopener">$51 from Percival →</a>
-          </div>
-          <div class="alt">
-            <div class="tags"><span class="tag">Scarf hater?</span></div>
-            <h4>Smartwool merino neck gaiter</h4>
-            <p>Keeps your neck warm, and you can pull it up to your cheeks. I run in one below 20°F.</p>
-            <a href="https://www.rei.com/product/223715/smartwool-thermal-merino-reversible-neck-gaiter" target="_blank" rel="noopener">$32 from REI →</a>
-          </div>
-        </div>
-      </section>
-      <section id="base-layers" class="sec">
-        <h2>Base layers</h2>
-        <p>The secret to getting through winter is learning how to layer. It’s an art, but you’ll get the hang of it. I like having both cotton and wool layers on hand: cotton above 40°F, wool below 30°F, and the middle 10 degrees depend on what’s clean :). Thin leggings or long johns are nice below 20°F as an extra barrier against the wind.</p><p>For this category in particular, don’t worry about buying anything new. As long as you have a long-sleeve top and pants to layer under your clothes, you’re all set.</p>
-        
-        <div class="pick">
-          <div class="tags"><span class="tag tag-solid">My go-to</span><span class="tag">year round</span></div>
-          <h3>Intimissimi ultralight cashmere-blend top</h3>
-          <p>My favorite, most versatile top. I wear her year round, under sweaters or just as a top.</p>
-          <a href="https://www.intimissimi.com/us/product/long_sleeve_boatneck_ultralight_with_cashmere_top-CLD28B.html" target="_blank" rel="noopener" class="btn">$65 from Intimissimi</a>
-        </div>
-        <div class="alts">
-          <div class="alt">
-            <div class="tags"><span class="tag">Budget pick</span></div>
-            <h4>Uniqlo Heattech</h4>
-            <p>Uniqlo for the win on basics! My friends love Heattech.</p>
-            <a href="https://www.uniqlo.com/us/en/products/E469765-000/00?colorDisplayCode=78" target="_blank" rel="noopener">$25 from Uniqlo →</a>
-          </div>
-          <div class="alt">
-            <div class="tags"><span class="tag">Buy it for life</span></div>
-            <h4>Smartwool classic thermal merino crew</h4>
-            <p>I got this after five years in Chicago, and it’s now my holy grail. I wear it all winter on runs and under sweaters.</p>
-            <a href="https://www.smartwool.com/en-us/products/womens-classic-thermal-merino-base-layer-crew-sw016369?variant=63206719062385" target="_blank" rel="noopener">$125 from Smartwool →</a>
-          </div>
-        </div>
-      </section>
-
-      <div class="group">Everything else</div>
-
-      <section id="boots" class="sec">
-        <h2>Boots</h2>
-        <p>My hot take is that you don’t really need to buy new shoes for the winter, especially in Evanston. The sidewalks and pathways get plowed and salted very quickly (normally before 8 a.m.!), so I don’t often feel the need to wear my snow boots. I normally wear a pair of shoes I don’t mind getting dirty.</p>
-        <p>If you are in the market, I would just get one pair (and pack a cute pair of shoes in your bag). You don’t need true snow boots, but a practical pair is always nice to have. Personally, I commute in weatherproofed, rubber-soled leather boots and break out my Sorels when I want to play in the snow.</p>
-        <div class="chips"><span>Brands I’d look at:</span><span class="tag">Sorel</span><span class="tag">Blundstone</span><span class="tag">UGG snow boots</span></div>
-      </section>
-
-      <section id="coats" class="sec">
-        <h2>Coats</h2>
-        <p>This will likely be the most expensive purchase! I have collected coats over the years as things have gone on sale. Anything that is puffy and water resistant should be good enough for this winter. Ideally the stuffing would be goose down, which is the warmest, but I have a few polyester coats that I rotate in.</p>
-        <p>Because this is your outer layer, it becomes more of your “outfit” as the winter goes on, so make sure to get something you like and that fits your style.</p>
-        <div class="pick">
-          <div class="tags"><span class="tag tag-solid">If I were buying</span><span class="tag">polar-vortex tested</span></div>
-          <h3>Patagonia Silent Down long parka</h3>
-          <p>If I were in the market for a new coat, this would be the one. My mom has this coat and wore it when she visited me during the polar vortex a few years ago. She stayed warm, and I love the length and cut.</p>
-          <a href="https://www.rei.com/product/193339/patagonia-silent-down-long-parka-womens" target="_blank" rel="noopener" class="btn">$449 from REI</a>
-        </div>
-        <div class="alts">
-          <div class="alt">
-            <div class="tags"><span class="tag">Something like this</span></div>
-            <h4>Uniqlo puffer jacket</h4>
-            <p>Something like this should be warm enough for this year. Want other options? Walk me through what you like to wear and I’ll send a few.</p>
-            <a href="https://www.uniqlo.com/us/en/products/E481675-000/00?colorDisplayCode=56" target="_blank" rel="noopener">$179.90 from Uniqlo →</a>
-          </div>
-        </div>
-      </section>
-
-      <section id="running" class="sec">
-        <h2>Bonus: if you run outside</h2>
-        <div class="table-box">
-          <table>
-            <thead><tr><th scope="col">Item</th><th scope="col">My pick</th><th scope="col">Price</th><th scope="col">Why</th></tr></thead>
-            <tbody>
-              <tr><td>Top</td><td><a href="https://www.nike.com/t/swift-womens-therma-fit-turtle-neck-running-top-Ih5P1cOx/HV2969-010" target="_blank" rel="noopener">Nike Swift Therma-FIT turtleneck</a></td><td class="num">$85</td><td>My winter go-to, over a long or short sleeve.</td></tr>
-              <tr><td>Bottoms</td><td><a href="https://www.nike.com/t/stride-mens-therma-fit-winterized-running-pants-b3wRiUQv/IO1246-010" target="_blank" rel="noopener">Nike Stride Therma-FIT pants</a></td><td class="num">$115</td><td>Only below 20°F. Doubled-up leggings work too.</td></tr>
-              <tr><td>Gloves</td><td><a href="https://www.nike.com/t/trail-gore-tex-storm-fit-running-gloves-nqN7cXyP/N1012397-042" target="_blank" rel="noopener">Nike Trail GORE-TEX gloves</a></td><td class="num">$55</td><td>Non-negotiable. Waterproof keeps hands warmer.</td></tr>
-              <tr><td>Socks</td><td><a href="https://www.smartwool.com/en-us/products/run-cold-weather-crew-socks-sw001905?variant=63799478747505" target="_blank" rel="noopener">Smartwool Run Cold Weather crew</a></td><td class="num">$24</td><td>My holy grail. Great warranty.</td></tr>
-              <tr><td>Neck gaiter</td><td><a href="https://www.nike.com/t/therma-fit-wrap-SBlcr5/N1002584-042" target="_blank" rel="noopener">Nike Therma-FIT wrap</a></td><td class="num">$25</td><td>Below 20°F. Helps with the cold-air cough.</td></tr>
-              <tr><td>Vest</td><td><a href="https://www.nike.com/t/nikelab-running-mens-vest-iwasLCFO/IO2205-010" target="_blank" rel="noopener">Nike down running vest</a></td><td class="num">$200</td><td>Below 10°F. Keep your chest warm.</td></tr>
-              <tr><td>Ear warmer</td><td><a href="https://www.rei.com/product/211161/cotopaxi-teca-fleece-headband" target="_blank" rel="noopener">Cotopaxi Teca fleece headband</a></td><td class="num">$20</td><td>Cuter than a beanie and I don’t overheat.</td></tr>
-              <tr><td>Hat</td><td><a href="https://www.nike.com/t/terra-dri-fit-uncuffed-running-beanie-WBjuEQAz/N1013205-082" target="_blank" rel="noopener">Nike Terra Dri-FIT beanie</a></td><td class="num">$35</td><td>Only if you need one. Some people like them.</td></tr>
-              <tr><td>Shoes</td><td><a href="https://www.nike.com/t/vomero-18-gore-tex-mens-waterproof-road-running-shoes-with-reflective-accents-vEWMytZi/HQ7001-004" target="_blank" rel="noopener">Nike Vomero 18 GORE-TEX</a></td><td class="num">$170</td><td>Super optional, for very wet days.</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </section>
-
-      <section class="guide" id="guide">
-        <img src="snow-angel.jpg" alt="Quynh-Nhi making a snow angel in a long black parka">
-        <div>
-          <span class="kicker">Meet your guide · Quynh-Nhi Tran</span>
-          <p>7 winters in Chicago. Winter is still my favorite season. I’m still always cold.</p>
-          <h2>Still figuring out your winter wardrobe?</h2>
-          <p>If you’d like help thinking through the details (what you already have, what’s worth buying, what fits your style and budget), I’d love to help. Send me a note.</p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSfLQm3GucfrW4snLwF-FonYZRAUPphRfsn3Q043VYb1VzMQIQ/viewform?usp=header" target="_blank" rel="noopener">reach out →</a>
-        </div>
-      </section>
-    </main>
-
-    <aside aria-label="In this guide">
-      <span class="kicker">In this guide</span>
-      <a href="#everything">Everything I recommend</a><a href="#gloves">Gloves</a><a href="#hats">Hats</a><a href="#scarves">Scarves</a><a href="#base-layers">Base layers</a><a href="#boots">Boots</a><a href="#coats">Coats</a><a href="#running">If you run outside</a>
-    </aside>
-  </div>
+  <section class="block center">
+    <p>Want help with your own closet?</p>
+    <a class="btn-outline" href="work-with-me.html">See pricing →</a>
+  </section>
 
   <footer><span>written with cold hands <span class="star">✦</span></span><span>© 2026 Quynh-Nhi Tran</span></footer>
 </div>
